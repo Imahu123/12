@@ -1,0 +1,115 @@
+/*** ESSENTIAL STYLES ***/
+
+.header5 #top-menu.sf-menu {
+	position: relative;
+}
+.header1 .nav-container, .header2 .nav-container , .header3 .nav-container, .header7 .nav-container, .header8 .nav-container, .header9 .nav-container {
+	position: relative;
+}
+.header6 .fixed-header .nav-container, .header4 .fixed-header .nav-container, .header5 .fixed-header .nav-container {
+	position: relative;
+}
+.header6 .fixed-header .sf-menu, .header4 .fixed-header .sf-menu, .header5 .fixed-header .sf-menu {
+	position: inherit;
+}
+.sf-menu ul, .sf-menu li {
+	margin: 0;
+	padding: 0;
+}
+/** No Mega Menu **/
+.sf-menu li.menu-item-no-megamenu, .sf-menu li.menu-item-no-megamenu li, .header5 #top-menu.sf-menu li {
+	position: relative;
+}
+.sf-menu .menu-item-no-megamenu ul, .sf-menu .menu-item-has-megamenu ul ul, .header5 #top-menu.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 999;
+	box-shadow: none;
+	width: 180px;
+}
+.sf-menu .menu-item-no-megamenu ul ul, .header5 #top-menu.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+/** Has Mega Menu **/
+.sf-menu .sf-mega {
+	background-color: #f2f2f2;
+	position: absolute;
+	display: none;
+    width: 100%;
+	/*top: 100%;*/
+	left: 0;
+	z-index: 99;
+}
+.sf-menu .sf-mega.container-fluid {
+	width: 100%;
+}
+@media (min-width:1200px){
+	.sf-menu .sf-mega.menu-fullwidth{
+		width: 100%;
+	}
+}
+.sf-menu .menu-item-has-megamenu ul li {
+	position: relative;
+}
+.sf-menu .menu-item-has-megamenu ul ul {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+
+
+
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > .sf-mega,
+.sf-menu li.sfHover > .sf-mega {
+	display: block;
+}
+
+.sf-menu > li > a {
+	display: block;
+	position: relative;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+
+
+
+
+
+
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	/*position: absolute;
+	top: 50%;
+	right: 1em;
+	height: 0;
+	width: 0;*/
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}
